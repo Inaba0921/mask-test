@@ -1,0 +1,1 @@
+from PIL import Image import numpy as npimport matplotlib.pyplot as plt photo = []photo = np.array(Image.open('00001_2017:04:06_12-39-43.jpg'))#print(photo.dtype)#print(photo.ndim)#print(photo.shape)mask = []np.save(np.load('mask.npy'),mask)result = photo * mask plt.imshow(result)#photo.show()#mask.show()
